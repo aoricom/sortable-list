@@ -5,10 +5,10 @@
     <title>sortable-list test</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <script src="../../web-component-tester/browser.js"></script>
+    <script src="../../../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script src="../../../wct-browser-legacy/browser.js"></script>
 
-    <link rel="import" href="../sortable-list.html">
+    <script type="module" src="../sortable-list.js"></script>
   </head>
   <body>
 
@@ -18,14 +18,14 @@
       </template>
     </test-fixture>
 
-    <script>
+    <script type="module">
+      import '../sortable-list.js';
       suite('sortable-list', function() {
 
         test('instantiating the element works', function() {
           var element = fixture('basic');
           assert.equal(element.is, 'sortable-list');
         });
-
       });
     </script>
   </body>
